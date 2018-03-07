@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>DOM Study</title>
+
+	<style>
+	.container {text-align: center; margin: 0 auto;}
+	p {text-align: justify; width: 400px; margin: 0 auto; padding-bottom: 15px;}
+	label {font-weight: bold; }
+	</style>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			var button = document.getElementById("btn");
+			var buttonBack = document.getElementById("btnBack");
+			var p0 = document.getElementsByTagName("p")[0];
+			var p1 = document.getElementsByTagName("p")[1];
+			var p2 = document.getElementsByTagName("p")[2];
+			
+			button.onclick = function() {
+				p0.style.background = "yellow";
+				p1.style.border = "3px solid black";
+				p2.style.textDecoration = "underline";
+			}
+
+			buttonBack.onclick = function() {
+				p0.style.background = null;
+				p1.style.border = null;
+				p2.style.textDecoration = null;
+			}
+		}
+
+	</script>	
+</head>
+<body>
+
+	<main class="container">
+		<h2>Título do Parágrafo</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nunc ante, porta vel justo vel, pharetra ultrices est. Fusce dapibus auctor nisl, a luctus ipsum fringilla id. Sed nec lacinia nisl, eu elementum arcu. Suspendisse potenti. Mauris id feugiat turpis. Nam quis nisl at metus pretium interdum ut ac risus. Pellentesque imperdiet nisl quis augue lacinia tincidunt. Nam blandit vitae libero malesuada rutrum.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nunc ante, porta vel justo vel, pharetra ultrices est. Fusce dapibus auctor nisl, a luctus ipsum fringilla id. Sed nec lacinia nisl, eu elementum arcu. Suspendisse potenti. Mauris id feugiat turpis. Nam quis nisl at metus pretium interdum ut ac risus. Pellentesque imperdiet nisl quis augue lacinia tincidunt. Nam blandit vitae libero malesuada rutrum.</p> 
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nunc ante, porta vel justo vel, pharetra ultrices est. Fusce dapibus auctor nisl, a luctus ipsum fringilla id. Sed nec lacinia nisl, eu elementum arcu. Suspendisse potenti. Mauris id feugiat turpis. Nam quis nisl at metus pretium interdum ut ac risus. Pellentesque imperdiet nisl quis augue lacinia tincidunt. Nam blandit vitae libero malesuada rutrum.</p>  
+		
+		<button type="button" id="btn">Rodar Script</button>
+		<button type="button" id="btnBack">Voltar</button>
+		
+	</main>
+
+</body>
+
+</html>
