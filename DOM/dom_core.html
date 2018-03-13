@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>DOM Core</title>
+
+	<script type="text/javascript">
+		window.onload = function() {
+			var msg;
+			var ins = document.getElementById("insert");			
+			var elBotao = document.getElementById("btn");
+			
+			var p = document.getElementsByTagName("p")[0];
+			var plength = p.childNodes.length;
+			var pfirstname = p.firstChild.nodeName;
+			var pfirstvalue = p.firstChild.nodeValue;
+			var pattr = p.hasAttributes()
+
+
+			elBotao.onclick = function() {
+					
+				msg = "<ul>";
+				msg += "<li> Qtde de nós filhos: " + plength + "</li>";
+				msg += "<li> Nome do primeiro filho: " + pfirstname + "</li>";
+				msg += "<li> Valor do primeiro filho: " + pfirstvalue + "</li>";
+				msg += "<li> ========================</li>";
+				msg += "<li> Nó 'P' possui atributos: " +  pattr + "</li>";
+				ins.innerHTML = msg;
+
+
+			}
+
+
+			
+
+
+		}
+	</script>
+</head>
+
+<body>
+
+<h2>Titulo</h2>
+	<p id="xpto">Paragrafo <b>com texto em negrito</b> e outras coisas.</p>
+
+<button type="button" id="btn">Rodar</button>
+<div id="insert"></div>
+
+
+</body>
+</html>
